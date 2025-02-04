@@ -3,6 +3,16 @@
 // // removeDuplicates([1, 2, 3, 3, 4, 5]); // => [1, 2, 3, 4, 5]
 // // removeDuplicates([1, 1, 1, 1, 1, 1]); // => [1]
 // // removeDuplicates([1, 2, 3, 4, 5]); // => [1, 2, 3, 4, 5]
-module.exports = function removeDuplicates(arr) {
+module.exports = function removeDuplicates(arr: number[]) : number[]{
   // your code here
+  const uniquesArr : number[] = [];
+  const obj : object = {};
+
+  for(const currNum of arr) {
+    if(!obj[currNum]) {
+      uniquesArr.push(currNum)
+    }
+    obj[currNum] = true;
+  }
+   return uniquesArr;
 };

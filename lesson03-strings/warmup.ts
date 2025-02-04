@@ -8,6 +8,10 @@
 // "a&!#bb", "aaabbbb" => false
 //  "a&!#bb", "abb" => true
 
+const isAnagrams = (str1: string, str2: string) : boolean => {
+    return true
+}
+
 // 2. Solve the same problem as above but do not sort the strings. What is the difference in time complexity when we don't sort the strings?
 
 // "aba", "baa" => true
@@ -23,3 +27,5 @@
 // "abad", "abcd" => 1
 //  "aabb", "baba" => 0
 // "aaaazzzz", "bbbbwwww" => 8
+
+export { isAnagrams }

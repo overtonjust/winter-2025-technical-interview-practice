@@ -1,4 +1,6 @@
-const lengthOfLongestSubstring = require('./problem');
+import { lengthOfLongestSubstring } from './problem.ts';
+import {describe, expect, test} from '@jest/globals';
+
 
 describe('lengthOfLongestSubstring', () => {
     // Simple cases

@@ -1,4 +1,5 @@
-const sayHello = require("./problem");
+import { sayHello } from "./problem";
+import {describe, expect, test} from '@jest/globals';
 
 describe("sayHello", () => {
   test("should return 'Hello, World!'", () => {

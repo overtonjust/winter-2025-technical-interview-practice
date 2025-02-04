@@ -1,7 +1,14 @@
-const isPalindrome = require('./problem');
+import { isPalindrome } from "./problem";
+import {describe, expect, test} from '@jest/globals';
 
 describe('isPalindrome', () => {
     // Simplest valid cases
+    test('arguement received should be a string', () => {
+        const wrapper = () => {
+            isPalindrome(3)
+        }
+        expect(wrapper).toThrow();
+    })
     test('empty string should be palindrome', () => {
         expect(isPalindrome('')).toBe(true);
     });

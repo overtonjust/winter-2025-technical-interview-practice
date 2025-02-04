@@ -10,8 +10,26 @@
  * @param {string} str - The input string.
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
-function isPalindrome(str) {
+export function isPalindrome(str) {
   // your code here
+  if(typeof str !== 'string') {
+    throw TypeError('function must receive a string');
+  };
+
+  if(str.charAt(0).toLowerCase() !== str.charAt(str.length - 1).toLowerCase()) {
+    return false;
+  }
+
+  const strArr = str.split('');
+  let chars : string[] = [] ;
+
+  for(let i = 0; i < strArr.length; i++) {
+    if(strArr[i].match(/[A-Za-z0-9]/g)) {
+      chars.push(strArr[i].toLowerCase())
+    }
+  }
+
+  return chars.join('') == chars.reverse().join('');
+
 }
 
-module.exports = isPalindrome;

@@ -1,3 +1,4 @@
+import { describe, test, expect } from "@jest/globals";
 const removeDuplicates = require("./problem");
 
 test("Returns correct array with duplicates removed", () => {

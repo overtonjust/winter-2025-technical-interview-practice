@@ -5,6 +5,7 @@ You are given a text string and a pattern string. Your task is to implement a st
 
 Write a function `stringMatching(text, pattern)` that takes in two strings as arguments and returns an array of indices where the pattern is found in the text. If the pattern is not found, return an empty array.
 
+
 Example:
 
 Input:
@@ -12,7 +13,7 @@ text = "ababcababcabc"
 pattern = "abc"
 
 Output:
-[2, 7, 10, 13]
+[2, 7, 10]
 
 Input:
 text = "hello world"
@@ -27,10 +28,25 @@ Note:
 
 */
 
-function stringMatching(text, pattern) {
+function stringMatching(text: string, pattern: string) : number[] {
   // TODO: Implement the string matching algorithm
   // Return an array of indices where the pattern is found in the text
   // If the pattern is not found, return an empty array
+  const patternFoundAt :number[] = [];
+
+  if(text.length == 0 || pattern.length == 0) {
+    return [];
+  };
+
+  for(let i = 0; i < text.length; ++i) {
+    const curr = text.slice(i, i + pattern.length);
+    if(curr === pattern) {
+      patternFoundAt.push(i);
+    }  
+  };
+
+  return patternFoundAt;
 }
 
-module.exports = stringMatching;
+
+export { stringMatching };
