@@ -9,4 +9,4 @@ function sumConsecutiveNumbers(n) {
   // Your code here
 }
 
-module.exports = sumConsecutiveNumbers;
+export { sumConsecutiveNumbers };

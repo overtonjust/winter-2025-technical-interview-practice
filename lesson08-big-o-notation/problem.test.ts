@@ -1,3 +1,4 @@
+import { test, expect } from "@jest/globals";
 const sumConsecutiveNumbers = require("./problem");
 
 test("sumConsecutiveNumbers should return 0 when n is 0", () => {
