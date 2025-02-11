@@ -3,8 +3,10 @@
  * This should ideally run in O(1) time.
  */
 
-function isLeapYear(year) {
+function isLeapYear(year: number) : boolean {
   // TODO: Implement the function
-}
+  return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;
+};
 
-module.exports = isLeapYear;
+
+export { isLeapYear };
