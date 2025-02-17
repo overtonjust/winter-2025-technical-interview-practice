@@ -1,4 +1,5 @@
 const isValid = require("./problem");
+import {describe, test, expect } from '@jest/globals';
 
 describe("isValid", () => {
   // Simple cases
